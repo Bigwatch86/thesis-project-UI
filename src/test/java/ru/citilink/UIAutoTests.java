@@ -21,9 +21,6 @@ public class UIAutoTests extends TestBase{
     @DisplayName("Проверка загрузки header")
     @Severity(SeverityLevel.BLOCKER)
     public void headerLoading() {
-        step("Открыть страницу:", () -> {
-            open("https://www.citilink.ru/");
-        });
         step("Проверяем загрузку header", () -> {
             $(".Container").shouldBe(visible);
             $(".Container .MainHeader__logo").shouldBe(visible);
