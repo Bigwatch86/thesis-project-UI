@@ -17,7 +17,7 @@ public class MainPageTests extends TestBase{
 
     @Test
     @Owner("igor.glazov")
-    @Feature("Citilink")
+    @Feature("Главная страница Citilink")
     @DisplayName("Проверка загрузки header")
     @Severity(SeverityLevel.BLOCKER)
     public void headerLoading() {
@@ -29,7 +29,7 @@ public class MainPageTests extends TestBase{
 
     @Test
     @Owner("igor.glazov")
-    @Feature("Citilink")
+    @Feature("Главная страница Citilink")
     @DisplayName("Специальный падающий тест")
     @Severity(SeverityLevel.BLOCKER)
     public void searchWishlist(){
@@ -44,7 +44,7 @@ public class MainPageTests extends TestBase{
 
     @Test
     @Owner("igor.glazov")
-    @Feature("Citilink")
+    @Feature("Главная страница Citilink")
     @DisplayName("Проверка наличия корзины")
     @Severity(SeverityLevel.BLOCKER)
     public void searchBasket(){
@@ -55,7 +55,7 @@ public class MainPageTests extends TestBase{
 
     @Test
     @Owner("igor.glazov")
-    @Feature("Citilink")
+    @Feature("Главная страница Citilink")
     @DisplayName("Проверка наличия каталога товаров")
     @Severity(SeverityLevel.BLOCKER)
     public void catalogIsVisible(){
@@ -66,7 +66,7 @@ public class MainPageTests extends TestBase{
 
     @Test
     @Owner("igor.glazov")
-    @Feature("Citilink")
+    @Feature("Главная страница Citilink")
     @DisplayName("Проверка загрузки каталога товаров")
     @Severity(SeverityLevel.BLOCKER)
     public void catalogLoading(){
