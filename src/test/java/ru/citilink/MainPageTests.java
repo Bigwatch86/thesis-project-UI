@@ -57,7 +57,7 @@ public class MainPageTests extends TestBase{
                     });
         });
     }
-
+    @Disabled
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
@@ -89,32 +89,47 @@ public class MainPageTests extends TestBase{
         });
     }
 
-    @Disabled
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
-    @DisplayName("Специальный падающий тест")
-    @Severity(SeverityLevel.BLOCKER)
-    public void searchWishlist(){
-        step("Проверяем наличие избранного", () -> {
-            $(".HeaderMenu__buttons_wishlist").shouldBe(visible);
-            $(".HeaderMenu__buttons_wishlist").click();
-        });
-        step("Нет избранного, так как пользователь не залогинен", () -> {
-            $("h2").shouldHave(text("Избранное"));
-        });
-    }
-    @Disabled
-    @Test
-    @Owner("igor.glazov")
-    @Feature("Главная страница Citilink")
-    @DisplayName("Проверка наличия корзины")
+    @DisplayName("Проверка загрузки популярных категорий")
     @Severity(SeverityLevel.BLOCKER)
     public void searchBasket(){
-        step("Проверяем наличие корзины", () -> {
-            $(".HeaderMenu__buttons_basket").shouldBe(visible);
+        step("Проверяем загрузку популярных категори", () -> {
+            $(".PopularCategoriesBox__header").shouldBe(visible).shouldHave(text("Популярные категории"));
+            step("Ноутбуки", () -> {
+                $(".PopularCategoriesBox__content div").shouldBe(visible).shouldHave(text("Ноутбуки"));
+            });
+            step("Смартфоны", () -> {
+                $(".PopularCategoriesBox__content div").sibling(0).shouldBe(visible).shouldHave(text("Смартфоны"));
+            });
+            step("Телевизоры", () -> {
+                $(".PopularCategoriesBox__content div").sibling(1).shouldBe(visible).shouldHave(text("Телевизоры"));
+            });
+            step("Мониторы", () -> {
+                $(".PopularCategoriesBox__content div").sibling(2).shouldBe(visible).shouldHave(text("Мониторы"));
+            });
+            step("Процессоры", () -> {
+                $(".PopularCategoriesBox__content div").sibling(3).shouldBe(visible).shouldHave(text("Процессоры"));
+            });
+            step("Садовая техника", () -> {
+                $(".PopularCategoriesBox__content div").sibling(4).shouldBe(visible).shouldHave(text("Садовая техника"));
+            });
+            step("Стиральные машины", () -> {
+                $(".PopularCategoriesBox__content div").sibling(5).shouldBe(visible).shouldHave(text("Стиральные машины"));
+            });
+            step("Климатическая техника", () -> {
+                $(".PopularCategoriesBox__content div").sibling(6).shouldBe(visible).shouldHave(text("Климатическая техника"));
+            });
+            step("Холодильники", () -> {
+                $(".PopularCategoriesBox__content div").sibling(7).shouldBe(visible).shouldHave(text("Холодильники"));
+            });
+            step("Компьютеры", () -> {
+                $(".PopularCategoriesBox__content div").sibling(8).shouldBe(visible).shouldHave(text("Компьютеры"));
+            });
         });
     }
+
     @Disabled
     @Test
     @Owner("igor.glazov")
