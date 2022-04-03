@@ -95,8 +95,8 @@ public class MainPageTests extends TestBase{
     @DisplayName("Проверка загрузки популярных категорий")
     @Severity(SeverityLevel.BLOCKER)
     public void searchBasket(){
-        step("Проверяем загрузку популярных категори", () -> {
-            $(".PopularCategoriesBox__header").shouldBe(visible).shouldHave(text("Популярные категории"));
+        step("Проверяем загрузку популярных категорий", () -> {
+            $(".PopularCategoriesBox__header").shouldBe(visible);
             step("Ноутбуки", () -> {
                 $(".PopularCategoriesBox__content div").shouldBe(visible).shouldHave(text("Ноутбуки"));
             });
