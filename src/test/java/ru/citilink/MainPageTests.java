@@ -127,7 +127,23 @@ public class MainPageTests extends TestBase{
             step("Меню нижнего колонтитула", () -> {
                 $(".FooterMenu__menu").shouldBe(visible).shouldBe(text("Журнал"), text("Акции"), text("Сервисные центры"),
                         text("Услуги"), text("Корпоративным клиентам"), text("Обзоры"), text("Барахолка"), text("Форум"), text("Конфигуратор"),
-                        text("Подброр расходных материалов"), text("Ситилинк"), text("Новости"), text("Клуб Ситилинк"), text("Вакансии"));
+                        text("Подбор расходных материалов"), text("Ситилинк"), text("Новости"), text("Клуб Ситилинк"), text("Вакансии"));
+            });
+            step("Копирайт", () -> {
+                $(".Footer__citilink").shouldBe(visible).shouldBe(text("© Ситилинк, 2008–2022"));
+            });
+            step("Платёжные системы и партнёры", () -> {
+                $(".PaymentIcons__payment-icon_world-pay").shouldBe(visible);
+                $(".PaymentIcons__payment-icon_mastercard_pay").shouldBe(visible);
+                $(".PaymentIcons__payment-icon_visa_pay").shouldBe(visible);
+                $(".PaymentIcons__payment-icon_union_pay").shouldBe(visible);
+                $(".PaymentIcons__payment-icon_yandex_market").shouldBe(visible);
+                $(".PaymentIcons__payment-icon_akit").shouldBe(visible);
+                $(".PaymentIcons__payment-icon_eaist").shouldBe(visible);
+                $(".PaymentIcons__payment-icon_rtrs").shouldBe(visible);
+            });
+            step("Политика обработки персональных данных", () -> {
+                $(".Footer__gdpr").shouldBe(visible).shouldHave(text("Политика обработки персональных данных"));
             });
         });
     }
