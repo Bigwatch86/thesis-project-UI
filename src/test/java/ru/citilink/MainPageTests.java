@@ -143,7 +143,7 @@ public class MainPageTests extends TestBase{
                 $(".PaymentIcons__payment-icon_rtrs").shouldBe(visible);
             });
             step("Политика обработки персональных данных", () -> {
-                $(".Footer__gdpr").shouldBe(visible).shouldHave(text("Политика обработки персональных данных"));
+                $(".Footer__gdpr").shouldBe(visible);
             });
         });
     }
