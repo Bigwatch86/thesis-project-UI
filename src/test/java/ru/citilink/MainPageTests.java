@@ -99,7 +99,7 @@ public class MainPageTests extends TestBase{
             $(".js--Footer").shouldBe(visible);
             step("Подписка по почте", () -> {
                 $(".Subscribe__title_email").shouldBe(visible).shouldHave(text("Хочу быть в курсе акций и новинок"));
-                $(".Subscribe__email").$(".Subscribe__input InputBox").shouldBe(visible).shouldHave(text("Мой e-mail"));
+                $(".Subscribe__email").scrollIntoView(true).$(".Subscribe__input InputBox").shouldBe(visible).shouldHave(text("Мой e-mail"));
                 $(".Subscribe__email").$(".Subscribe__button").shouldBe(visible).shouldHave(text("Подписаться"));
             });
             step("Уведомления в браузере", () -> {
