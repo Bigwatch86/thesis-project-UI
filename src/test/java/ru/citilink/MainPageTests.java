@@ -92,40 +92,21 @@ public class MainPageTests extends TestBase{
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
-    @DisplayName("Проверка загрузки популярных категорий")
+    @DisplayName("Проверка загрузки нижнего колонтитула")
     @Severity(SeverityLevel.BLOCKER)
-    public void searchBasket(){
-        step("Проверяем загрузку популярных категорий", () -> {
-            $(".PopularCategoriesBox__header").shouldBe(visible);
-            step("Ноутбуки", () -> {
-                $(".PopularCategoriesBox__content div").shouldBe(visible).shouldHave(text("Ноутбуки"));
+    public void footerLoading(){
+        step("Проверяем загрузку нижнего колонтитула", () -> {
+            $(".js--Footer").shouldBe(visible);
+            step("Подписка по почте", () -> {
+                $(".Subscribe__title_email").shouldBe(visible).shouldHave(text("Хочу быть в курсе акций и новинок"));
+                $(".Subscribe__email").$(".Subscribe__input InputBox").shouldBe(visible).shouldHave(text("Мой e-mail"));
+                $(".Subscribe__email").$(".Subscribe__button").shouldBe(visible).shouldHave(text("Подписаться"));
             });
-            step("Смартфоны", () -> {
-                $(".PopularCategoriesBox__content div").sibling(0).shouldBe(visible).shouldHave(text("Смартфоны"));
-            });
-            step("Телевизоры", () -> {
-                $(".PopularCategoriesBox__content div").sibling(1).shouldBe(visible).shouldHave(text("Телевизоры"));
-            });
-            step("Мониторы", () -> {
-                $(".PopularCategoriesBox__content div").sibling(2).shouldBe(visible).shouldHave(text("Мониторы"));
-            });
-            step("Процессоры", () -> {
-                $(".PopularCategoriesBox__content div").sibling(3).shouldBe(visible).shouldHave(text("Процессоры"));
-            });
-            step("Садовая техника", () -> {
-                $(".PopularCategoriesBox__content div").sibling(4).shouldBe(visible).shouldHave(text("Садовая техника"));
-            });
-            step("Стиральные машины", () -> {
-                $(".PopularCategoriesBox__content div").sibling(5).shouldBe(visible).shouldHave(text("Стиральные машины"));
-            });
-            step("Климатическая техника", () -> {
-                $(".PopularCategoriesBox__content div").sibling(6).shouldBe(visible).shouldHave(text("Климатическая техника"));
-            });
-            step("Холодильники", () -> {
-                $(".PopularCategoriesBox__content div").sibling(7).shouldBe(visible).shouldHave(text("Холодильники"));
-            });
-            step("Компьютеры", () -> {
-                $(".PopularCategoriesBox__content div").sibling(8).shouldBe(visible).shouldHave(text("Компьютеры"));
+            step("Уведомления в браузере", () -> {
+                $(".Subscribe__title_push").shouldBe(visible).shouldHave(text("Включить уведомления в браузере"));
+                $(".Subscribe__push").$(".Subscribe__input-block").shouldBe(visible).shouldHave(text("Новости, " +
+                        "акции и все самые важные события для вас!"));
+                $(".Subscribe__push").$(".Subscribe__button-push").shouldBe(visible).shouldHave(text("Включить"));
             });
         });
     }
