@@ -31,9 +31,10 @@ public class MainPageTests extends TestBase{
             $(".MainMenu__link a").shouldBe(visible).shouldHave(text("Журнал"));
             $(".MainMenu__link a").sibling(0).shouldBe(visible).shouldHave(text("Акции"));
             $(".MainMenu__link a").sibling(1).shouldBe(visible).shouldHave(text("Ситилинк.Бизнес"));
-            $(".MainMenu__link a").sibling(2).shouldBe(visible).shouldHave(text("Доставка"));
-            $(".MainMenu__link a").sibling(3).shouldBe(visible).shouldHave(text("Магазины"));
-            $(".MainMenu__link a").sibling(4).shouldBe(visible).shouldHave(text("Обратная связь"));
+            $(".MainMenu__link a").sibling(2).shouldBe(visible).shouldHave(text("Конфигуратор"));
+            $(".MainMenu__link a").sibling(3).shouldBe(visible).shouldHave(text("Доставка"));
+            $(".MainMenu__link a").sibling(4).shouldBe(visible).shouldHave(text("Магазины"));
+            $(".MainMenu__link a").sibling(5).shouldBe(visible).shouldHave(text("Обратная связь"));
         });
     }
 
