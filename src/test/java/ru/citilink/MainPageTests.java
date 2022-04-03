@@ -25,8 +25,8 @@ public class MainPageTests extends TestBase{
         step("Проверяем загрузку header", () -> {
             $(".Container").shouldBe(visible);
             $(".Container .MainHeader__logo").shouldBe(visible);
-            $(".MainHeader__city").shouldBe(visible).shouldHave(text("Санкт-Петербург"));
-            $(".MainHeader__phone").shouldBe(visible).shouldHave(text("332-84-84"));
+            $(".MainHeader__city").shouldBe(visible);
+            $(".MainHeader__phone").shouldBe(visible);
             $(".MainMenu__link a").shouldBe(visible).shouldHave(text("Журнал"));
             $(".MainMenu__link a").sibling(0).shouldBe(visible).shouldHave(text("Акции"));
             $(".MainMenu__link a").sibling(1).shouldBe(visible).shouldHave(text("Ситилинк.Бизнес"));
