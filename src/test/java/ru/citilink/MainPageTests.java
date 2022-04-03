@@ -15,7 +15,7 @@ import static io.qameta.allure.Allure.step;
 
 @DisplayName("Тесты для проверки содержимого главной страницы citilink.ru")
 public class MainPageTests extends TestBase{
-
+    @Disabled
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
@@ -57,22 +57,32 @@ public class MainPageTests extends TestBase{
                     });
         });
     }
-    @Disabled
+
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
     @DisplayName("Проверка загрузки нижней части заголовка и её содержимого")
     @Severity(SeverityLevel.BLOCKER)
     public void headerBottomLoading() {
-        step("Проверяем загрузку верхней части заголовка и её содержимого", () -> {
+        step("Проверяем загрузку нижней части заголовка и её содержимого", () -> {
             $(".MainHeader__inner_bottom").shouldBe(visible);
-            $(".MainHeader__catalog").shouldBe(visible);
+            step("Каталог", () -> {
+                $(".MainHeader__catalog").shouldBe(visible);
+            });
             $(".MainHeader__actions-block").shouldBe(visible);
-            $(".MainHeader__search").shouldBe(visible);
+            step("Поле поиска", () -> {
+                $(".MainHeader__search").shouldBe(visible);
+            });
             $(".HeaderMenu").shouldBe(visible);
-            $(".AuthPopup ").shouldBe(visible);
-            $("[data-name=\"wishlist\"]").shouldBe(visible);
-            $("[data-name=\"compare\"]").shouldBe(visible);
+            step("Войти", () -> {
+                $(".AuthPopup ").shouldBe(visible);
+            });
+            step("Избранное", () -> {
+                $("[data-name=\"wishlist\"]").shouldBe(visible);
+            });
+            step("Сравнение", () -> {
+                $("[data-name=\"compare\"]").shouldBe(visible);
+            });
             step("Корзина", () -> {
                 $("[data-name=\"basket\"]").shouldBe(visible);
                     });
