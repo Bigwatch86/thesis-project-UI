@@ -4,6 +4,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -36,6 +37,7 @@ public class MainPageTests extends TestBase{
         });
     }
 
+    @Disabled
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
@@ -50,7 +52,7 @@ public class MainPageTests extends TestBase{
             $("h2").shouldHave(text("Избранное"));
         });
     }
-
+    @Disabled
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
@@ -61,7 +63,7 @@ public class MainPageTests extends TestBase{
             $(".HeaderMenu__buttons_basket").shouldBe(visible);
         });
     }
-
+    @Disabled
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
@@ -72,7 +74,7 @@ public class MainPageTests extends TestBase{
             $("[data-label=\"Каталог товаров\"]").shouldBe(visible);
         });
     }
-
+    @Disabled
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
