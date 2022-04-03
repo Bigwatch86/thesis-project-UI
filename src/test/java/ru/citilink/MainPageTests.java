@@ -94,7 +94,7 @@ public class MainPageTests extends TestBase{
     @Feature("Главная страница Citilink")
     @DisplayName("Проверка загрузки нижнего колонтитула")
     @Severity(SeverityLevel.BLOCKER)
-    public void footerLoading(){
+    public void footerLoading() {
         step("Проверяем загрузку нижнего колонтитула", () -> {
             $(".js--Footer").shouldBe(visible);
             step("Подписка по почте", () -> {
@@ -111,27 +111,49 @@ public class MainPageTests extends TestBase{
         });
     }
 
-    @Disabled
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
-    @DisplayName("Проверка наличия каталога товаров")
+    @DisplayName("Проверка загрузки тела нижнего колонтитула")
     @Severity(SeverityLevel.BLOCKER)
-    public void catalogIsVisible(){
-        step("Проверяем наличие каталога товаров", () -> {
-            $("[data-label=\"Каталог товаров\"]").shouldBe(visible);
+    public void footerBodyLoading(){
+        step("Проверяем загрузку тела нижнего колонтитула", () -> {
+            $(".Footer__body").shouldBe(visible);
+            step("Контакты", () -> {
+                $(".Footer__contact").$(".Heading").shouldBe(visible).shouldHave(text("Контакты"));
+                $(".Footer__contact").$(".Footer__contact-address").shouldBe(visible).shouldHave(text("Адреса магазинов"));
+                $(".Footer__contact").$(".Footer__contact-button").shouldBe(visible).shouldHave(text("Задать вопрос"));
+            });
+            step("Меню нижнего колонтитула", () -> {
+                $(".FooterMenu__menu").shouldBe(visible).shouldBe(text("Журнал"), text("Акции"), text("Сервисные центры"),
+                        text("Услуги"), text("Корпоративным клиентам"), text("Обзоры"), text("Барахолка"), text("Форум"), text("Конфигуратор"),
+                        text("Подбор расходных материалов"), text("Ситилинк"), text("Новости"), text("Клуб Ситилинк"), text("Вакансии"));
+            });
         });
     }
-    @Disabled
-    @Test
-    @Owner("igor.glazov")
-    @Feature("Главная страница Citilink")
-    @DisplayName("Проверка загрузки каталога товаров")
-    @Severity(SeverityLevel.BLOCKER)
-    public void catalogLoading(){
-        step("Проверяем загрузку каталога товаров", () -> {
-            $("[data-label=\"Каталог товаров\"]").click();
-            $(".CatalogMenu__category").shouldBe(visible);
-        });
-    }
+
+
+//    @Disabled
+//    @Test
+//    @Owner("igor.glazov")
+//    @Feature("Главная страница Citilink")
+//    @DisplayName("Проверка наличия каталога товаров")
+//    @Severity(SeverityLevel.BLOCKER)
+//    public void catalogIsVisible(){
+//        step("Проверяем наличие каталога товаров", () -> {
+//            $("[data-label=\"Каталог товаров\"]").shouldBe(visible);
+//        });
+//    }
+//    @Disabled
+//    @Test
+//    @Owner("igor.glazov")
+//    @Feature("Главная страница Citilink")
+//    @DisplayName("Проверка загрузки каталога товаров")
+//    @Severity(SeverityLevel.BLOCKER)
+//    public void catalogLoading(){
+//        step("Проверяем загрузку каталога товаров", () -> {
+//            $("[data-label=\"Каталог товаров\"]").click();
+//            $(".CatalogMenu__category").shouldBe(visible);
+//        });
+//    }
 }
