@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Тесты для проверки содержимого главной страницы citilink.ru")
@@ -18,12 +19,20 @@ public class MainPageTests extends TestBase{
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
-    @DisplayName("Проверка загрузки header")
+    @DisplayName("Проверка загрузки header и его содержимого")
     @Severity(SeverityLevel.BLOCKER)
     public void headerLoading() {
         step("Проверяем загрузку header", () -> {
             $(".Container").shouldBe(visible);
             $(".Container .MainHeader__logo").shouldBe(visible);
+            $(".MainHeader__city").shouldBe(visible).shouldHave(text("Санкт-Петербург"));
+            $(".MainHeader__phone").shouldBe(visible).shouldHave(text("332-84-84"));
+            $(".MainMenu__link a").shouldBe(visible).shouldHave(text("Журнал"));
+            $(".MainMenu__link a").sibling(0).shouldBe(visible).shouldHave(text("Акции"));
+            $(".MainMenu__link a").sibling(1).shouldBe(visible).shouldHave(text("Ситилинк.Бизнес"));
+            $(".MainMenu__link a").sibling(2).shouldBe(visible).shouldHave(text("Доставка"));
+            $(".MainMenu__link a").sibling(3).shouldBe(visible).shouldHave(text("Магазины"));
+            $(".MainMenu__link a").sibling(4).shouldBe(visible).shouldHave(text("Обратная связь"));
         });
     }
 
