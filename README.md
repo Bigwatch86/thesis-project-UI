@@ -35,6 +35,15 @@
 <h2>:arrow_forward:	 Запуск тестов в Jenkins</h2>
 <p>Для запуска тестов используется инструмент CI/CD под названием <b>Jenkins</b></p>
 
+<a target="_blank" href="https://jenkins.autotests.cloud/job/010-Bigwatch-thesis-project-UI/">Ссылка на задачу для запуска тестов</a>
+
+<p><i>Парамтеры сборки выбираются при запуске задачи:<b></i>
+</br>
+</br>
+
+<p align="center">
+<img title="Job launch" src="images/screenshots/Jenkins_1.jpg">
+</p>
 ```
 clean
 test
@@ -46,9 +55,8 @@ test
 ```
 <p><code>BROWSER</code> – браузер, в котором будут выполняться тесты.</p>
 <p><code>VERSION</code> – версия браузера, в которой будут выполняться тесты.</p>
-<p><code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.</p>
-<p><code>LOGIN</code> - логин для авторизации на удалённом сервере.</p>
-<p><code>PASSWORD</code> - пароль для авторизации на удалённом сервере.</p>
+<p><code>COMMENT</code> – комментарий для сообщения в Телеграм.</p>
+<p><code>ENVIRONMENT</code> - среда, на которой прогоняются автотесты.</p>
 
 <h3>:large_blue_diamond:	 Процесс запуска происходит следующим образом:</h3>
 
