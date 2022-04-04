@@ -72,19 +72,25 @@
 <h3>:large_orange_diamond:	 Страница со списком всех пройденных проверок:</h3>
 
 <p align="center">
-<img title="Отчёт о запуске" src="images/screenshots/Allure_TestOps_1.png">
+<img title="Test results" src="images/screenshots/Allure_TestOps_1.jpg">
 </p>
 
-<h3>:large_orange_diamond:	 Страница с графической информацией:</h3>
+<h3>:large_orange_diamond:	 Страница со всеми запусками:</h3>
 
 <p align="center">
-<img title="Allure Graphs" src="images/screenshots/graphs.png">
+<img title="Allure Launches" src="images/screenshots/Allure_TestOps_2jpg">
 </p>
 
-<h3>:large_orange_diamond:	 Страница с описанием шагов теста:</h3>
+<h3>:large_orange_diamond:	 Дефект, описанный в результате запуска тестов:</h3>
 
 <p align="center">
-<img title="Allure Behaviors" src="images/screenshots/behaviors.png">
+<img title="Allure Defects" src="images/screenshots/Allure_TestOps_3.jpg">
+</p>
+
+<h3>:large_orange_diamond:	 Страница с общими результатами тестирования в графическом виде:</h3>
+
+<p align="center">
+<img title="Allure Defects" src="images/screenshots/Allure_TestOps_3.jpg">
 </p>
 
 
