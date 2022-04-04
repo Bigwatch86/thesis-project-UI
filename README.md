@@ -1,4 +1,4 @@
-<h1>Проект по тестированию главной страницы интернет-магазина "Ситилинк"</h1>
+<h1>Проект по тестированию главной страницы интернет-магазина "Ситилинк".</h1>
 
 <a target="_blank" href="https://www.citilink.ru/">Ссылка на сайт магазина</a>
 
@@ -45,15 +45,6 @@
 <img title="Job launch" src="images/screenshots/Jenkins_1.jpg">
 </p>
 
-```
-clean
-test
--Dbrowser=${BROWSER}
--Dversion=${VERSION}
--DremoteUrl=${REMOTEURL}
--Dlogin=${LOGIN}
--Dpassword=${PASSWORD}
-```
 <p><code>BROWSER</code> – браузер, в котором будут выполняться тесты.</p>
 <p><code>VERSION</code> – версия браузера, в которой будут выполняться тесты.</p>
 <p><code>COMMENT</code> – комментарий для сообщения в Телеграм.</p>
