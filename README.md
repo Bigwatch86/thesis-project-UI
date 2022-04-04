@@ -61,6 +61,12 @@
 <img title="Jenkins" src="images/screenshots/Jenkins_2.jpg">
 </p>
 
+<p><i>Результаты работы сборки можно посмотреть, нажав на значок "Allure TestOps"</b>: </i>
+</br>
+</br>
+<img title="Jenkins" src="images/screenshots/Jenkins_3.jpg">
+</p>
+
 <h2>:bar_chart:	 Отчет о результатах прохождения тестов в Allure TestOps</h2>
 
 <h3>:large_orange_diamond:	 Страница с обобщёнными данными по отчёту:</h3>
