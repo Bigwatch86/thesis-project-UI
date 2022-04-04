@@ -103,7 +103,7 @@ public class MainPageTests extends TestBase{
                 $(".Subscribe__email").$(".Subscribe__button").shouldBe(visible).shouldHave(text("Подписаться"));
             });
             step("Уведомления в браузере", () -> {
-                $(".Subscribe__title_push").shouldBe(visible).shouldHave(text("Включить уведомления в браузере"));
+                $(".Subscribe__title_pus").shouldBe(visible).shouldHave(text("Включить уведомления в браузере"));
                 $(".Subscribe__push").$(".Subscribe__input-block").shouldBe(visible).shouldHave(text("Новости, " +
                         "акции и все самые важные события для вас!"));
                 $(".Subscribe__push").$(".Subscribe__button-push").shouldBe(visible).shouldHave(text("Включить"));
