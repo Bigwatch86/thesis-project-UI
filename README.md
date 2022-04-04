@@ -108,6 +108,3 @@
 </br>
 <img title="Selenoid" src="images/screenshots/Selenoid.gif">
 </p>
-
-
-<img src="https://readme-jokes.vercel.app/api" alt="Jokes Card" />
