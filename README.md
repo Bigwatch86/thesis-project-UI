@@ -69,10 +69,10 @@
 
 <h2>:bar_chart:	 Отчет о результатах прохождения тестов в Allure TestOps</h2>
 
-<h3>:large_orange_diamond:	 Страница с обобщёнными данными по отчёту:</h3>
+<h3>:large_orange_diamond:	 Страница со списком всех пройденных проверок:</h3>
 
 <p align="center">
-<img title="Allure Overview" src="images/screenshots/overview.png">
+<img title="Отчёт о запуске" src="images/screenshots/Allure_TestOps_1.png">
 </p>
 
 <h3>:large_orange_diamond:	 Страница с графической информацией:</h3>
