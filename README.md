@@ -19,16 +19,16 @@
 
 
 <p>
-<img title="Allure TestOps" src="images/logo/Allure_TestOps.png" height="48" width="48"> 
-<img title="GitHub" src="images/logo/GitHub.svg" height="48" width="48">
-<img title="Gradle" src="images/logo/Gradle.svg" height="48" width="48">
 <img title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg" height="48" width="48">
+<img title="GitHub" src="images/logo/GitHub.svg" height="48" width="48">
+<img title="Java" src="images/logo/Java.svg" height="48" width="48">
+<img title="Gradle" src="images/logo/Gradle.svg" height="48" width="48">
 <img title="JUnit5" src="images/logo/JUnit5.svg" height="48" width="48">
 <img title="Selenide" src="images/logo/Selenide.svg" height="48" width="48">
 <img title="Selenoid" src="images/logo/Selenoid.svg" height="48" width="48">
 <img title="Telegram" src="images/logo/Telegram.svg" height="48" width="48">
-<img title="Java" src="images/logo/Java.svg" height="48" width="48">
 <img title="Jenkins" src="images/logo/Jenkins.svg" height="48" width="48"> 
+<img title="Allure TestOps" src="images/logo/Allure_TestOps.png" height="48" width="48">
 <img title="Jira" src="images/logo/Jira.png" height="48" width="48"> 
 </p>
 
@@ -42,10 +42,6 @@
 </br>
 </br>
 
-<p align="center">
-<img title="Job launch" src="images/screenshots/Jenkins_1.jpg">
-</p>
-
 <p><code>BROWSER</code> – браузер, в котором будут выполняться тесты.</p>
 <p><code>VERSION</code> – версия браузера, в которой будут выполняться тесты.</p>
 <p><code>COMMENT</code> – комментарий для сообщения в Телеграм.</p>
@@ -56,13 +52,13 @@
 <p><i>На странице сборки выбираем <b>"Собрать с параметрами"</b>: </i>
 </br>
 </br>
-<img title="Jenkins" src="images/screenshots/jenkins_1.png">
+<img title="Jenkins" src="images/screenshots/Jenkins_1.png">
 </p>
 
 <p><i>Выбираем необходимые параметры запуска и нажимаем <b>"Собрать"</b>: </i>
 </br>
 </br>
-<img title="Jenkins" src="images/screenshots/jenkins_2.png">
+<img title="Jenkins" src="images/screenshots/Jenkins_1.png">
 </p>
 
 <h2>:bar_chart:	 Отчет о результатах прохождения тестов в Allure TestOps</h2>
