@@ -17,7 +17,7 @@
 
 
 <p>
-<img title="Allure Report" src="images/logo/Allure_Report.svg" height="48" width="48"> 
+<img title="Allure TestOps" src="images/logo/Allure_TestOps.png" height="48" width="48"> 
 <img title="GitHub" src="images/logo/GitHub.svg" height="48" width="48">
 <img title="Gradle" src="images/logo/Gradle.svg" height="48" width="48">
 <img title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg" height="48" width="48">
