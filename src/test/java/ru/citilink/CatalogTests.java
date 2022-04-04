@@ -54,9 +54,9 @@ public class CatalogTests extends TestBase{
     @DisplayName("Проверка работы поиска в каталоге товаров")
     @Severity(SeverityLevel.BLOCKER)
     public void CatalogSearch() {
-        step("Проверяем загрузку каталога товаров", () -> $(".MainHeader__catalog button").click());
+        step("Загружаем каталог товаров", () -> $(".MainHeader__catalog button").click());
         step("Осуществляем поиск", () -> {
-            $(".CatalogMenu__search InputBox ").setValue("Ноутбук HP").pressEnter();
+            $(".CatalogMenu__search label").setValue("Ноутбук HP").pressEnter();
             $("Subcategory").shouldBe(visible);
             $(".Subcategory__header h1").shouldHave(text("Ноутбуки HP"));
         });
