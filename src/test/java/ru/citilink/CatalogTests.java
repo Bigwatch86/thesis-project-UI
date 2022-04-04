@@ -31,7 +31,7 @@ public class CatalogTests extends TestBase{
     @Feature("Каталог товаров")
     @DisplayName("Проверка загрузки каталога товаров")
     @Severity(SeverityLevel.BLOCKER)
-    public void headerTopLoading() {
+    public void catalogLoading() {
         step("Проверяем загрузку каталога товаров", () -> {
             $(".MainHeader__catalog button").shouldBe(visible).click();
             step("Лого каталога", () -> {
@@ -46,5 +46,19 @@ public class CatalogTests extends TestBase{
                         text("Товары для геймеров"), text(""));
                     });
         });
+    }
+
+    @Test
+    @Owner("igor.glazov")
+    @Feature("Каталог товаров")
+    @DisplayName("Проверка работы поиска в каталоге товаров")
+    @Severity(SeverityLevel.BLOCKER)
+    public void CatalogSearch() {
+        step("Проверяем загрузку каталога товаров", () -> $(".MainHeader__catalog button").click());
+        step("Осуществляем поиск", () -> {
+            $(".CatalogMenu__search InputBox ").setValue("Ноутбук HP");
+            $(".Subcategory__header h1").shouldHave(text("Ноутбуки HP"));
+        });
+
     }
 }
