@@ -90,7 +90,7 @@
 <h3>:large_orange_diamond:	 Страница с общими результатами тестирования в графическом виде:</h3>
 
 <p align="center">
-<img title="Allure Defects" src="images/screenshots/Allure_TestOps_4.jpg">
+<img title="Allure Dashboards" src="images/screenshots/Allure_TestOps_4.jpg">
 </p>
 
 
@@ -98,7 +98,7 @@
 <p><i>После окончания сборки в Телеграм отправляется уведомление со ссылкой на отчёт. </i>
 </br>
 </br>
-<img title="Telegram notification" src="images/screenshots/telegram_message.png">
+<img title="Telegram notification" src="images/screenshots/telegram_message.jpg">
 </p>
 
 
