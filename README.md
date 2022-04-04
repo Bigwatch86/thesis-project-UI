@@ -106,7 +106,7 @@
 <p><i>К каждому тесту в отчете прилагается видео: </i>
 </br>
 </br>
-<img title="Selenoid" src="images/screenshots/selenoid.gif">
+<img title="Selenoid" src="images/screenshots/Selenoid.gif">
 </p>
 
 
