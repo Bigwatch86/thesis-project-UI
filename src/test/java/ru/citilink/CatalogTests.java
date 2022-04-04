@@ -38,7 +38,7 @@ public class CatalogTests extends TestBase{
                 $(".CatalogMenu__logo").shouldBe(visible);
                     });
             step("Меню каталога", () -> {
-                $(".CatalogMenu__category").shouldBe(visible).shouldBe(text("Смартфоны и гаджеты"),
+                $(".CatalogMenu__category").shouldBe(visible).shouldHave(text("Смартфоны и гаджеты"),
                         text("Ноутбуки и компьютеры"), text("Телевизоры, аудио-видео, фото"),
                         text("Бытовая техника для дома и кухни"), text("Строительство и ремонт"), text("Дом и дача"),
                         text("Умный дом и системы безопасности"), text("Автотовары"), text("Канцтовары, Мебель и Офисная техника"),
