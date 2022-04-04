@@ -1,4 +1,6 @@
-<h1>Проект по тестированию главной страницы citilink.ru</h1>
+<h1>Проект по тестированию главной страницы интернет-магазина "Ситилинк"</h1>
+
+<a target="_blank" href="https://www.citilink.ru/">Ссылка на сайт магазина</a>
 
 <h2>:bookmark_tabs: Содержание</h2>
 
@@ -6,7 +8,7 @@
 
 :eight_spoked_asterisk:	 Запуск тестов в Jenkins
 
-:eight_spoked_asterisk:	 Отчет о результатах тестирования в Allure Report
+:eight_spoked_asterisk:	 Отчет о результатах прохождения тестов в Allure TestOps
 
 :eight_spoked_asterisk:	 Уведомления в Telegram с использованием бота
 
@@ -62,7 +64,7 @@ test
 <img title="Jenkins" src="images/screenshots/jenkins_2.png">
 </p>
 
-<h2>:bar_chart:	 Отчет о результатах тестирования в Allure Report</h2>
+<h2>:bar_chart:	 Отчет о результатах прохождения тестов в Allure TestOps</h2>
 
 <h3>:large_orange_diamond:	 Страница с обобщёнными данными по отчёту:</h3>
 
