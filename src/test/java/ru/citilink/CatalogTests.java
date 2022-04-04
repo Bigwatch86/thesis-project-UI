@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
-@DisplayName("Тесты для проверки каталога товаров")
+@DisplayName("Тесты для проверки каталога товаров и поиска в нём")
 public class CatalogTests extends TestBase{
 
     @Test
