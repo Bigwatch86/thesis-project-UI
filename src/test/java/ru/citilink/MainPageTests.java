@@ -4,7 +4,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -126,8 +125,9 @@ public class MainPageTests extends TestBase{
             });
             step("Меню нижнего колонтитула", () -> {
                 $(".FooterMenu__menu").shouldBe(visible).shouldBe(text("Журнал"), text("Акции"), text("Сервисные центры"),
-                        text("Услуги"), text("Корпоративным клиентам"), text("Обзоры"), text("Барахолка"), text("Форум"), text("Конфигуратор"),
-                        text("Подбор расходных материалов"), text("Ситилинк"), text("Новости"), text("Клуб Ситилинк"), text("Вакансии"));
+                        text("Услуги"), text("Корпоративным клиентам"), text("Обзоры"), text("Барахолка"), text("Форум"),
+                        text("Конфигуратор"), text("Подбор расходных материалов"), text("Ситилинк"), text("Новости"),
+                        text("Клуб Ситилинк"), text("Вакансии"));
             });
             step("Копирайт", () -> {
                 $(".Footer__citilink").shouldBe(visible).shouldBe(text("© Ситилинк, 2008–2022"));
@@ -147,29 +147,4 @@ public class MainPageTests extends TestBase{
             });
         });
     }
-
-
-//    @Disabled
-//    @Test
-//    @Owner("igor.glazov")
-//    @Feature("Главная страница Citilink")
-//    @DisplayName("Проверка наличия каталога товаров")
-//    @Severity(SeverityLevel.BLOCKER)
-//    public void catalogIsVisible(){
-//        step("Проверяем наличие каталога товаров", () -> {
-//            $("[data-label=\"Каталог товаров\"]").shouldBe(visible);
-//        });
-//    }
-//    @Disabled
-//    @Test
-//    @Owner("igor.glazov")
-//    @Feature("Главная страница Citilink")
-//    @DisplayName("Проверка загрузки каталога товаров")
-//    @Severity(SeverityLevel.BLOCKER)
-//    public void catalogLoading(){
-//        step("Проверяем загрузку каталога товаров", () -> {
-//            $("[data-label=\"Каталог товаров\"]").click();
-//            $(".CatalogMenu__category").shouldBe(visible);
-//        });
-//    }
 }
