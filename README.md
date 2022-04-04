@@ -98,7 +98,7 @@
 <p><i>После окончания сборки в Телеграм отправляется уведомление со ссылкой на отчёт. </i>
 </br>
 </br>
-<img title="Telegram notification" src="images/screenshots/telegram_message.jpg">
+<img title="Telegram notification" src="images/screenshots/Telegram_message.jpg">
 </p>
 
 
