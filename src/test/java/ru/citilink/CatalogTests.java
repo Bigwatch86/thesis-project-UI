@@ -57,8 +57,7 @@ public class CatalogTests extends TestBase{
         step("Загружаем каталог товаров", () -> $(".MainHeader__catalog button").click());
         step("Осуществляем поиск", () -> {
             $(".CatalogMenu__search input").setValue("Ноутбук HP").pressEnter();
-            $("Subcategory").shouldBe(visible);
-            $(".Subcategory__header h1").shouldHave(text("Ноутбуки HP"));
+            $(".Subcategory__header h1").shouldBe(visible).shouldHave(text("Ноутбуки HP"));
         });
 
     }
