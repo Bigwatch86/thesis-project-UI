@@ -52,13 +52,13 @@
 <p><i>На странице сборки выбираем <b>"Собрать с параметрами"</b>: </i>
 </br>
 </br>
-<img title="Jenkins" src="images/screenshots/Jenkins_1.png">
+<img title="Jenkins" src="images/screenshots/Jenkins_1.jpg">
 </p>
 
 <p><i>Выбираем необходимые параметры запуска и нажимаем <b>"Собрать"</b>: </i>
 </br>
 </br>
-<img title="Jenkins" src="images/screenshots/Jenkins_1.png">
+<img title="Jenkins" src="images/screenshots/Jenkins_2.jpg">
 </p>
 
 <h2>:bar_chart:	 Отчет о результатах прохождения тестов в Allure TestOps</h2>
