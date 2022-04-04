@@ -19,11 +19,8 @@ public class TestBase {
     static void setUp() {
         String browser = System.getProperty("browser");
         String version = System.getProperty("version");
-        //String remoteUrl = System.getProperty("remoteUrl");
         String remoteUrl = config.remoteUrl();
-        //String login = System.getProperty("login");
         String login = config.login();
-        //String password = System.getProperty("password");
         String password = config.password();
 
         Configuration.browserSize = "1920x1080";
