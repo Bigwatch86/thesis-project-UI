@@ -90,7 +90,7 @@
 <h3>:large_orange_diamond:	 Страница с общими результатами тестирования в графическом виде:</h3>
 
 <p align="center">
-<img title="Allure Defects" src="images/screenshots/Allure_TestOps_3.jpg">
+<img title="Allure Defects" src="images/screenshots/Allure_TestOps_4.jpg">
 </p>
 
 
