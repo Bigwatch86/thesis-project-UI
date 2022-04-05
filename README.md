@@ -93,7 +93,7 @@
 <h3>:large_orange_diamond:	 Страница со всеми запусками:</h3>
 
 <p align="center">
-<img title="Allure Launches" src="images/screenshots/Allure_TestOps_2jpg">
+<img title="Allure Launches" src="images/screenshots/Allure_TestOps_2.jpg">
 </p>
 
 <h3>:large_orange_diamond:	 Дефект, описанный в результате запуска тестов:</h3>
