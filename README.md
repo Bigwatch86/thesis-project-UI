@@ -49,7 +49,7 @@
 
 <a target="_blank" href="https://jenkins.autotests.cloud/job/010-Bigwatch-thesis-project-UI/">Ссылка на задачу для запуска тестов</a>
 
-<p><i>Парамтеры сборки выбираются при запуске задачи:<b></i>
+<p><i>Параметры сборки выбираются при запуске задачи:<b></i>
 </br>
 </br>
 
