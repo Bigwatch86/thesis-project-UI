@@ -4,6 +4,8 @@
 
 <h2>:bookmark_tabs: Содержание</h2>
 
+:eight_spoked_asterisk:	 Реализованные проверки
+
 :eight_spoked_asterisk:	 Стек технологий
 
 :eight_spoked_asterisk:	 Запуск тестов в Jenkins
@@ -14,6 +16,13 @@
 
 :eight_spoked_asterisk:	 Пример запуска теста в Selenoid
 
+<h2>:eyes:	 Реализованные проверки</h2>
+:black_medium_square: Проверка загрузки верхней части заголовка и её содержимого
+:black_medium_square: Проверка загрузки нижней части заголовка и её содержимого
+:black_medium_square: Проверка загрузки нижнего колонтитула
+:black_medium_square: Проверка загрузки тела нижнего колонтитула
+:black_medium_square: Проверка наличия каталога товаров
+:black_medium_square: Проверка работы поиска в каталоге товаров
 
 <h2>:books:	 Стек технологий</h2>
 
