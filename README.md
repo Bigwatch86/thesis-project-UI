@@ -39,8 +39,7 @@
 <img title="Selenoid" src="images/logo/Selenoid.svg" height="48" width="48">
 <img title="Telegram" src="images/logo/Telegram.svg" height="48" width="48">
 <img title="Jenkins" src="images/logo/Jenkins.svg" height="48" width="48"> 
-<img title="Allure TestOps" src="images/logo/Allure_TestOps.png" height="48" width="48">
-<img title="Jira" src="images/logo/Jira.png" height="48" width="48"> 
+<img title="Allure TestOps" src="images/logo/Allure_TestOps.png" height="48" width="48"> 
 </p>
 
 
@@ -83,25 +82,25 @@
 <h4>:small_orange_diamond:	 Страница со списком всех пройденных проверок:</h4>
 
 <p align="center">
-<img title="Test results" src="images/screenshots/Allure_TestOps_1.jpg">
+<img title="Рузультаты тустирования" src="images/screenshots/Allure_TestOps_1.jpg">
 </p>
 
 <h4>:small_orange_diamond:	 Страница со всеми запусками:</h4>
 
 <p align="center">
-<img title="Allure Launches" src="images/screenshots/Allure_TestOps_2.jpg">
+<img title="Запуски" src="images/screenshots/Allure_TestOps_2.jpg">
 </p>
 
 <h4>:small_orange_diamond:	 Дефект, описанный в результате запуска тестов:</h4>
 
 <p align="center">
-<img title="Allure Defects" src="images/screenshots/Allure_TestOps_3.jpg">
+<img title="Деффекты" src="images/screenshots/Allure_TestOps_3.jpg">
 </p>
 
 <h4>:small_orange_diamond:	 Страница с общими результатами тестирования в графическом виде:</h4>
 
 <p align="center">
-<img title="Allure Dashboards" src="images/screenshots/Allure_TestOps_4.jpg">
+<img title="Доска с графической информацией" src="images/screenshots/Allure_TestOps_4.jpg">
 </p>
 
 
@@ -109,7 +108,7 @@
 <p><i>После окончания сборки в Телеграм отправляется уведомление со ссылкой на отчёт. </i>
 </br>
 </br>
-<img title="Telegram notification" src="images/screenshots/Telegram_message.jpg">
+<img title="Уведомление в Телеграм" src="images/screenshots/Telegram_message.jpg">
 </p>
 
 
@@ -117,5 +116,5 @@
 <p><i>К каждому тесту в отчете прилагается видео: </i>
 </br>
 </br>
-<img title="Selenoid" src="images/screenshots/Selenoid.gif">
+<img title="Видео в Селеноид" src="images/screenshots/Selenoid.gif">
 </p>
