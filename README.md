@@ -82,7 +82,7 @@
 <h4>:small_orange_diamond:	 Страница со списком всех пройденных проверок:</h4>
 
 <p align="center">
-<img title="Рузультаты тестирования" src="images/screenshots/Allure_TestOps_1.jpg">
+<img title="Результаты тестирования" src="images/screenshots/Allure_TestOps_1.jpg">
 </p>
 
 <h4>:small_orange_diamond:	 Страница со всеми запусками:</h4>
