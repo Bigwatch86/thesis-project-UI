@@ -21,9 +21,8 @@ public class CatalogTests extends TestBase{
     @DisplayName("Проверка наличия каталога товаров")
     @Severity(SeverityLevel.BLOCKER)
     public void catalogIsVisible(){
-        step("Проверяем наличие каталога товаров", () -> {
-            $("[data-label=\"Каталог товаров\"]").shouldBe(visible);
-        });
+        step("Проверяем наличие каталога товаров", () ->
+            $("[data-label=\"Каталог товаров\"]").shouldBe(visible));
     }
 
     @Test
@@ -34,9 +33,8 @@ public class CatalogTests extends TestBase{
     public void catalogLoading() {
         step("Проверяем загрузку каталога товаров", () -> {
             $(".MainHeader__catalog button").shouldBe(visible).click();
-            step("Лого каталога", () -> {
-                $(".CatalogMenu__logo").shouldBe(visible);
-                    });
+            step("Лого каталога", () ->
+                $(".CatalogMenu__logo").shouldBe(visible));
             step("Меню каталога", () -> {
                 $(".CatalogMenu__category").shouldBe(visible).shouldHave(text("Смартфоны и гаджеты"),
                         text("Ноутбуки и компьютеры"), text("Телевизоры, аудио-видео, фото"),
@@ -54,11 +52,11 @@ public class CatalogTests extends TestBase{
     @DisplayName("Проверка работы поиска в каталоге товаров")
     @Severity(SeverityLevel.BLOCKER)
     public void CatalogSearch() {
-        step("Загружаем каталог товаров", () -> $(".MainHeader__catalog button").click());
+        step("Загружаем каталог товаров", () ->
+                $(".MainHeader__catalog button").click());
         step("Осуществляем поиск", () -> {
             $(".CatalogMenu__search input").setValue("Ноутбук HP").pressEnter();
             $(".Subcategory__header h1").shouldBe(visible).shouldHave(text("Ноутбуки HP"));
         });
-
     }
 }
