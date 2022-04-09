@@ -4,8 +4,10 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import ru.citilink.pages.CatalogPage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -15,6 +17,8 @@ import static io.qameta.allure.Allure.step;
 @DisplayName("Тесты для проверки каталога товаров и поиска в нём")
 public class CatalogTests extends TestBase{
 
+    CatalogPage catalogPage = new CatalogPage();
+    @Disabled
     @Test
     @Owner("igor.glazov")
     @Feature("Каталог товаров")
@@ -24,7 +28,7 @@ public class CatalogTests extends TestBase{
         step("Проверяем наличие каталога товаров", () ->
             $("[data-label=\"Каталог товаров\"]").shouldBe(visible));
     }
-
+    @Disabled
     @Test
     @Owner("igor.glazov")
     @Feature("Каталог товаров")
@@ -53,10 +57,10 @@ public class CatalogTests extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     public void CatalogSearch() {
         step("Загружаем каталог товаров", () ->
-                $(".MainHeader__catalog button").click());
+                catalogPage.setOpenCatalog());
         step("Осуществляем поиск", () -> {
-            $(".CatalogMenu__search input").setValue("Ноутбук HP").pressEnter();
-            $(".Subcategory__header h1").shouldBe(visible).shouldHave(text("Ноутбуки HP"));
+            catalogPage.typeSearchInput("Ноутбук HP");
+            catalogPage.checkResultSearch("Ноутбуки HP");
         });
     }
 }
