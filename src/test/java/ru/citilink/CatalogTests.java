@@ -15,20 +15,21 @@ import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Тесты для проверки каталога товаров и поиска в нём")
-public class CatalogTests extends TestBase{
+public class CatalogTests extends TestBase {
 
     CatalogPage catalogPage = new CatalogPage();
+
     @Disabled
     @Test
     @Owner("igor.glazov")
     @Feature("Каталог товаров")
     @DisplayName("Проверка наличия каталога товаров")
     @Severity(SeverityLevel.BLOCKER)
-    public void catalogIsVisible(){
+    public void catalogIsVisible() {
         step("Проверяем наличие каталога товаров", () ->
-            $("[data-label=\"Каталог товаров\"]").shouldBe(visible));
+                $("[data-label=\"Каталог товаров\"]").shouldBe(visible));
     }
-    @Disabled
+
     @Test
     @Owner("igor.glazov")
     @Feature("Каталог товаров")
@@ -36,17 +37,24 @@ public class CatalogTests extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     public void catalogLoading() {
         step("Проверяем загрузку каталога товаров", () -> {
-            $(".MainHeader__catalog button").shouldBe(visible).click();
+            catalogPage.OpenCatalog();
             step("Лого каталога", () ->
-                $(".CatalogMenu__logo").shouldBe(visible));
+                    catalogPage.checkCataloLogo());
             step("Меню каталога", () -> {
-                $(".CatalogMenu__category").shouldBe(visible).shouldHave(text("Смартфоны и гаджеты"),
-                        text("Ноутбуки и компьютеры"), text("Телевизоры, аудио-видео, фото"),
-                        text("Бытовая техника для дома и кухни"), text("Строительство и ремонт"), text("Дом и дача"),
-                        text("Умный дом и системы безопасности"), text("Автотовары"), text("Канцтовары, Мебель и Офисная техника"),
-                        text("Красота и здоровье"), text("Детские товары"), text("Спорт и отдых"),
-                        text("Товары для геймеров"));
-                    });
+                catalogPage.checkCategories("Смартфоны и гаджеты");
+                catalogPage.checkCategories("Ноутбуки и компьютеры");
+                catalogPage.checkCategories("Телевизоры, аудио-видео, фото");
+                catalogPage.checkCategories("Бытовая техника для дома и кухни");
+                catalogPage.checkCategories("Строительство и ремонт");
+                catalogPage.checkCategories("Дом и дача");
+                catalogPage.checkCategories("Умный дом и системы безопасности");
+                catalogPage.checkCategories("Автотовары");
+                catalogPage.checkCategories("Канцтовары, Мебель и Офисная техника");
+                catalogPage.checkCategories("Красота и здоровье");
+                catalogPage.checkCategories("Детские товары");
+                catalogPage.checkCategories("Спорт и отдых");
+                catalogPage.checkCategories("Товары для геймеров");
+            });
         });
     }
 
@@ -57,7 +65,7 @@ public class CatalogTests extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     public void CatalogSearch() {
         step("Загружаем каталог товаров", () ->
-                catalogPage.setOpenCatalog());
+                catalogPage.OpenCatalog());
         step("Осуществляем поиск", () -> {
             catalogPage.typeSearchInput("Ноутбук HP");
             catalogPage.checkResultSearch("Ноутбуки HP");
