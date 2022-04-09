@@ -9,9 +9,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.citilink.pages.CatalogPage;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Тесты для проверки каталога товаров и поиска в нём")
@@ -27,7 +24,7 @@ public class CatalogTests extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     public void catalogIsVisible() {
         step("Проверяем наличие каталога товаров", () ->
-                $("[data-label=\"Каталог товаров\"]").shouldBe(visible));
+                catalogPage.checkCatalogIsAvailable());
     }
 
     @Test
@@ -39,7 +36,7 @@ public class CatalogTests extends TestBase {
         step("Проверяем загрузку каталога товаров", () -> {
             catalogPage.OpenCatalog();
             step("Лого каталога", () ->
-                    catalogPage.checkCataloLogo());
+                    catalogPage.checkCatalogLogo());
             step("Меню каталога", () -> {
                 catalogPage.checkCategories("Смартфоны и гаджеты");
                 catalogPage.checkCategories("Ноутбуки и компьютеры");
