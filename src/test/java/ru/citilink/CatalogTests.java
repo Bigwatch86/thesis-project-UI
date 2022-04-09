@@ -4,7 +4,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.citilink.pages.CatalogPage;
@@ -16,7 +15,6 @@ public class CatalogTests extends TestBase {
 
     CatalogPage catalogPage = new CatalogPage();
 
-    @Disabled
     @Test
     @Owner("igor.glazov")
     @Feature("Каталог товаров")
