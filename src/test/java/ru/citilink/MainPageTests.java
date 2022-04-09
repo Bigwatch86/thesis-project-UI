@@ -4,7 +4,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -24,37 +23,27 @@ public class MainPageTests extends TestBase{
     public void headerTopLoading() {
         step("Проверяем загрузку верхней части заголовка и её содержимого", () -> {
             $(".MainHeader__inner_top").shouldBe(visible);
-            step("Лого", () -> {
-                $(".MainHeader__logo").shouldBe(visible);
-                    });
+            step("Лого", () ->
+                $(".MainHeader__logo").shouldBe(visible));
             $(".MainHeader__info-block").shouldBe(visible);
-            step("Город", () -> {
-                $(".MainHeader__city").shouldBe(visible);
-                    });
-            step("Телефон", () -> {
-                $(".MainHeader__phone").shouldBe(visible);
-                    });
-            step("Журнал", () -> {
-                $(".MainMenu__link a").shouldBe(visible).shouldHave(text("Журнал"));
-                    });
-            step("Акции", () -> {
-                $(".MainMenu__link a").sibling(0).shouldBe(visible).shouldHave(text("Акции"));
-                    });
-            step("Ситилинк.Бизнес", () -> {
-                $(".MainMenu__link a").sibling(1).shouldBe(visible).shouldHave(text("Ситилинк.Бизнес"));
-                    });
-            step("Конфигуратор", () -> {
-                $(".MainMenu__link a").sibling(2).shouldBe(visible).shouldHave(text("Конфигуратор"));
-                    });
-            step("Доставка", () -> {
-                $(".MainMenu__link a").sibling(3).shouldBe(visible).shouldHave(text("Доставка"));
-                    });
-            step("Магазины", () -> {
-                $(".MainMenu__link a").sibling(4).shouldBe(visible).shouldHave(text("Магазины"));
-                    });
-            step("Обратная связь", () -> {
-                $(".MainMenu__link a").sibling(5).shouldBe(visible).shouldHave(text("Обратная связь"));
-                    });
+            step("Город", () ->
+                $(".MainHeader__city").shouldBe(visible));
+            step("Телефон", () ->
+                $(".MainHeader__phone").shouldBe(visible));
+            step("Журнал", () ->
+                $(".MainMenu__link a").shouldBe(visible).shouldHave(text("Журнал")));
+            step("Акции", () ->
+                $(".MainMenu__link a").sibling(0).shouldBe(visible).shouldHave(text("Акции")));
+            step("Ситилинк.Бизнес", () ->
+                $(".MainMenu__link a").sibling(1).shouldBe(visible).shouldHave(text("Ситилинк.Бизнес")));
+            step("Конфигуратор", () ->
+                $(".MainMenu__link a").sibling(2).shouldBe(visible).shouldHave(text("Конфигуратор")));
+            step("Доставка", () ->
+                $(".MainMenu__link a").sibling(3).shouldBe(visible).shouldHave(text("Доставка")));
+            step("Магазины", () ->
+                $(".MainMenu__link a").sibling(4).shouldBe(visible).shouldHave(text("Магазины")));
+            step("Обратная связь", () ->
+                $(".MainMenu__link a").sibling(5).shouldBe(visible).shouldHave(text("Обратная связь")));
         });
     }
 
@@ -66,26 +55,20 @@ public class MainPageTests extends TestBase{
     public void headerBottomLoading() {
         step("Проверяем загрузку нижней части заголовка и её содержимого", () -> {
             $(".MainHeader__inner_bottom").shouldBe(visible);
-            step("Каталог", () -> {
-                $(".MainHeader__catalog").shouldBe(visible);
-            });
+            step("Каталог", () ->
+                $(".MainHeader__catalog").shouldBe(visible));
             $(".MainHeader__actions-block").shouldBe(visible);
-            step("Поле поиска", () -> {
-                $(".MainHeader__search").shouldBe(visible);
-            });
+            step("Поле поиска", () ->
+                $(".MainHeader__search").shouldBe(visible));
             $(".HeaderMenu").shouldBe(visible);
-            step("Войти", () -> {
-                $(".AuthPopup ").shouldBe(visible);
-            });
-            step("Избранное", () -> {
-                $("[data-name=\"wishlist\"]").shouldBe(visible);
-            });
-            step("Сравнение", () -> {
-                $("[data-name=\"compare\"]").shouldBe(visible);
-            });
-            step("Корзина", () -> {
-                $("[data-name=\"basket\"]").shouldBe(visible);
-                    });
+            step("Войти", () ->
+                $(".AuthPopup ").shouldBe(visible));
+            step("Избранное", () ->
+                $("[data-name=\"wishlist\"]").shouldBe(visible));
+            step("Сравнение", () ->
+                $("[data-name=\"compare\"]").shouldBe(visible));
+            step("Корзина", () ->
+                $("[data-name=\"basket\"]").shouldBe(visible));
         });
     }
 
@@ -130,9 +113,8 @@ public class MainPageTests extends TestBase{
                         text("Конфигуратор"), text("Подбор расходных материалов"), text("Ситилинк"), text("Новости"),
                         text("Клуб Ситилинк"), text("Вакансии"));
             });
-            step("Копирайт", () -> {
-                $(".Footer__citilink").shouldBe(visible).shouldBe(text("© Ситилинк, 2008–2022"));
-            });
+            step("Копирайт", () ->
+                $(".Footer__citilink").shouldBe(visible).shouldBe(text("© Ситилинк, 2008–2022")));
             step("Платёжные системы и партнёры", () -> {
                 $(".PaymentIcons__payment-icon_world-pay").shouldBe(visible);
                 $(".PaymentIcons__payment-icon_mastercard_pay").shouldBe(visible);
@@ -143,9 +125,8 @@ public class MainPageTests extends TestBase{
                 $(".PaymentIcons__payment-icon_eaist").shouldBe(visible);
                 $(".PaymentIcons__payment-icon_rtrs").shouldBe(visible);
             });
-            step("Политика обработки персональных данных", () -> {
-                $(".Footer__gdpr").shouldBe(visible);
-            });
+            step("Политика обработки персональных данных", () ->
+                $(".Footer__gdpr").shouldBe(visible));
         });
     }
 }
