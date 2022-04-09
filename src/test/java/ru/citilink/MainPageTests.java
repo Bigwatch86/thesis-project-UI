@@ -4,7 +4,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +14,7 @@ import static io.qameta.allure.Allure.step;
 
 @DisplayName("Тесты для проверки содержимого главной страницы citilink.ru")
 public class MainPageTests extends TestBase{
-    @Disabled
+
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
@@ -25,29 +24,29 @@ public class MainPageTests extends TestBase{
         step("Проверяем загрузку верхней части заголовка и её содержимого", () -> {
             $(".MainHeader__inner_top").shouldBe(visible);
             step("Лого", () ->
-                $(".MainHeader__logo").shouldBe(visible));
+                    $(".MainHeader__logo").shouldBe(visible));
             $(".MainHeader__info-block").shouldBe(visible);
             step("Город", () ->
-                $(".MainHeader__city").shouldBe(visible));
+                    $(".MainHeader__city").shouldBe(visible));
             step("Телефон", () ->
-                $(".MainHeader__phone").shouldBe(visible));
+                    $(".MainHeader__phone").shouldBe(visible));
             step("Журнал", () ->
-                $(".MainMenu__link a").shouldBe(visible).shouldHave(text("Журнал")));
+                    $(".MainMenu__link a").shouldBe(visible).shouldHave(text("Журнал")));
             step("Акции", () ->
-                $(".MainMenu__link a").sibling(0).shouldBe(visible).shouldHave(text("Акции")));
+                    $(".MainMenu__link a").sibling(0).shouldBe(visible).shouldHave(text("Акции")));
             step("Ситилинк.Бизнес", () ->
-                $(".MainMenu__link a").sibling(1).shouldBe(visible).shouldHave(text("Ситилинк.Бизнес")));
+                    $(".MainMenu__link a").sibling(1).shouldBe(visible).shouldHave(text("Ситилинк.Бизнес")));
             step("Конфигуратор", () ->
-                $(".MainMenu__link a").sibling(2).shouldBe(visible).shouldHave(text("Конфигуратор")));
+                    $(".MainMenu__link a").sibling(2).shouldBe(visible).shouldHave(text("Конфигуратор")));
             step("Доставка", () ->
-                $(".MainMenu__link a").sibling(3).shouldBe(visible).shouldHave(text("Доставка")));
+                    $(".MainMenu__link a").sibling(3).shouldBe(visible).shouldHave(text("Доставка")));
             step("Магазины", () ->
-                $(".MainMenu__link a").sibling(4).shouldBe(visible).shouldHave(text("Магазины")));
+                    $(".MainMenu__link a").sibling(4).shouldBe(visible).shouldHave(text("Магазины")));
             step("Обратная связь", () ->
-                $(".MainMenu__link a").sibling(5).shouldBe(visible).shouldHave(text("Обратная связь")));
+                    $(".MainMenu__link a").sibling(5).shouldBe(visible).shouldHave(text("Обратная связь")));
         });
     }
-    @Disabled
+
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
@@ -57,22 +56,22 @@ public class MainPageTests extends TestBase{
         step("Проверяем загрузку нижней части заголовка и её содержимого", () -> {
             $(".MainHeader__inner_bottom").shouldBe(visible);
             step("Каталог", () ->
-                $(".MainHeader__catalog").shouldBe(visible));
+                    $(".MainHeader__catalog").shouldBe(visible));
             $(".MainHeader__actions-block").shouldBe(visible);
             step("Поле поиска", () ->
-                $(".MainHeader__search").shouldBe(visible));
+                    $(".MainHeader__search").shouldBe(visible));
             $(".HeaderMenu").shouldBe(visible);
             step("Войти", () ->
-                $(".AuthPopup ").shouldBe(visible));
+                    $(".AuthPopup ").shouldBe(visible));
             step("Избранное", () ->
-                $("[data-name=\"wishlist\"]").shouldBe(visible));
+                    $("[data-name=\"wishlist\"]").shouldBe(visible));
             step("Сравнение", () ->
-                $("[data-name=\"compare\"]").shouldBe(visible));
+                    $("[data-name=\"compare\"]").shouldBe(visible));
             step("Корзина", () ->
-                $("[data-name=\"basket\"]").shouldBe(visible));
+                    $("[data-name=\"basket\"]").shouldBe(visible));
         });
     }
-    @Disabled
+
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
@@ -94,7 +93,7 @@ public class MainPageTests extends TestBase{
             });
         });
     }
-    @Disabled
+
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
@@ -115,7 +114,7 @@ public class MainPageTests extends TestBase{
                         text("Клуб Ситилинк"), text("Вакансии"));
             });
             step("Копирайт", () ->
-                $(".Footer__citilink").shouldBe(visible).shouldBe(text("© Ситилинк, 2008–2022")));
+                    $(".Footer__citilink").shouldBe(visible).shouldBe(text("© Ситилинк, 2008–2022")));
             step("Платёжные системы и партнёры", () -> {
                 $(".PaymentIcons__payment-icon_world-pay").shouldBe(visible);
                 $(".PaymentIcons__payment-icon_mastercard_pay").shouldBe(visible);
@@ -127,7 +126,7 @@ public class MainPageTests extends TestBase{
                 $(".PaymentIcons__payment-icon_rtrs").shouldBe(visible);
             });
             step("Политика обработки персональных данных", () ->
-                $(".Footer__gdpr").shouldBe(visible));
+                    $(".Footer__gdpr").shouldBe(visible));
         });
     }
 }
