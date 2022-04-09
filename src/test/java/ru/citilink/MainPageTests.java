@@ -12,6 +12,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
+@DisplayName("Тесты для проверки содержимого главной страницы citilink.ru")
 public class MainPageTests extends TestBase{
 
     @Test
