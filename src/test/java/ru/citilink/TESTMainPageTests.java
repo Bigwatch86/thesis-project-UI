@@ -18,7 +18,7 @@ import static io.qameta.allure.Allure.step;
 public class TESTMainPageTests extends TestBase{
     TESTMainPage mainPage = new TESTMainPage();
 
-    @Disabled
+
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
@@ -50,7 +50,7 @@ public class TESTMainPageTests extends TestBase{
                 mainPage.checkMainMenuFeedback("Обратная связь"));
         });
     }
-    @Disabled
+
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
@@ -75,7 +75,7 @@ public class TESTMainPageTests extends TestBase{
                 mainPage.checkBasket());
         });
     }
-    @Disabled
+
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
@@ -95,7 +95,7 @@ public class TESTMainPageTests extends TestBase{
             });
         });
     }
-    @Disabled
+
     @Test
     @Owner("igor.glazov")
     @Feature("Главная страница Citilink")
