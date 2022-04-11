@@ -8,6 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class TESTMainPage {
     SelenideElement
+            MainHeaderLogo = $(".MainHeader__logo"),
             MainHeaderInfoBlock = $(".MainHeader__info-block"),
             MainHeaderInnerTop = $(".MainHeader__inner_top"),
             MainHeaderCity = $(".MainHeader__city"),
@@ -21,20 +22,25 @@ public class TESTMainPage {
             MainMenuFeedback = $(".MainMenu__link a").sibling(5),
             MainHeaderInnerBottom = $(".MainHeader__inner_bottom"),
             MainHeaderCatalog = $(".MainHeader__catalog"),
-    MainHeaderActionsBlock = $(".MainHeader__actions-block"),
+            MainHeaderActionsBlock = $(".MainHeader__actions-block"),
             MainHeaderSearch = $(".MainHeader__search"),
-    HeaderMenu = $(".HeaderMenu"),
-    AuthPopup = $(".AuthPopup"),
-    Wishlist = $("[data-name=\"wishlist\"]"),
-    Compare = $("[data-name=\"compare\"]"),
-    Basket = $("[data-name=\"basket\"]"),
-
-
-            MainHeaderLogo = $(".MainHeader__logo"),
+            HeaderMenu = $(".HeaderMenu"),
+            AuthPopup = $(".AuthPopup"),
+            Wishlist = $("[data-name=\"wishlist\"]"),
+            Compare = $("[data-name=\"compare\"]"),
+            Basket = $("[data-name=\"basket\"]"),
+            JsFooter = $(".js--Footer"),
             SubscribeTitleEmail = $(".Subscribe__title_email"),
+            SubscribeEmailInput = $(".Subscribe__email").$(".Subscribe__input"),
+            SubscribeEmailButton = $(".Subscribe__email").$(".Subscribe__button"),
             SubscribeTitlePush = $(".Subscribe__title_push"),
+            SubscribePush = $(".Subscribe__push").$(".Subscribe__input-block"),
+            SubscribePushButton = $(".Subscribe__push").$(".Subscribe__button-push"),
             FooterContact = $(".Footer__contact");
 
+    public void checkLogo() {
+        MainHeaderLogo.shouldBe(visible);
+    }
     public void checkInfoBlock() {
         MainHeaderInfoBlock.shouldBe(visible);
     }
@@ -106,14 +112,21 @@ public class TESTMainPage {
     public void checkBasket() {
         Basket.shouldBe(visible);
     }
-
-
-    public void checkLogo() {
-        MainHeaderLogo.shouldBe(visible);
+    public void checkJsFooter() {
+        JsFooter.shouldBe(visible);
     }
-
-    public void checkMailTitle(String title) {
+    public void checkMailSubscribtion(String title) {
         SubscribeTitleEmail.shouldBe(visible).shouldHave(text(title));
+        SubscribeEmailInput.shouldBe(visible);
+    }
+    public void checkSubscribeEmailButton(String value) {
+        SubscribeEmailButton.shouldBe(visible).shouldHave(text(value));
+    }
+    public void checkSubscribePush(String value) {
+        SubscribePush.shouldBe(visible).shouldHave(text(value));
+    }
+    public void checkSubscribePushButton(String value) {
+        SubscribePushButton.shouldBe(visible).shouldHave(text(value));
     }
 
     public void checkPushTitle(String title) {

@@ -83,17 +83,15 @@ public class TESTMainPageTests extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     public void footerLoading() {
         step("Проверяем загрузку нижнего колонтитула", () -> {
-            $(".js--Footer").shouldBe(visible);
+            mainPage.checkJsFooter();
             step("Подписка по почте", () -> {
-                mainPage.checkMailTitle("Хочу быть в курсе акций и новинок");
-                $(".Subscribe__email").$(".Subscribe__input").shouldBe(visible);
-                $(".Subscribe__email").$(".Subscribe__button").shouldBe(visible).shouldHave(text("Подписаться"));
+                mainPage.checkMailSubscribtion("Хочу быть в курсе акций и новинок");
+                mainPage.checkSubscribeEmailButton("Подписаться");
             });
             step("Уведомления в браузере", () -> {
                 mainPage.checkPushTitle("Включить уведомления в браузере");
-                $(".Subscribe__push").$(".Subscribe__input-block").shouldBe(visible).shouldHave(text("Новости, " +
-                        "акции и все самые важные события для вас!"));
-                $(".Subscribe__push").$(".Subscribe__button-push").shouldBe(visible).shouldHave(text("Включить"));
+                mainPage.checkSubscribePush("Новости, акции и все самые важные события для вас!");
+                mainPage.checkSubscribePushButton("Включить");
             });
         });
     }
