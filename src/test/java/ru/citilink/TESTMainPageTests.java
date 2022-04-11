@@ -103,32 +103,42 @@ public class TESTMainPageTests extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     public void footerBodyLoading(){
         step("Проверяем загрузку тела нижнего колонтитула", () -> {
-            $(".Footer__body").shouldBe(visible);
+            mainPage.checkFooterBody();
             step("Контакты", () -> {
-                $(".Footer__contact").$(".Heading").shouldBe(visible).shouldHave(text("Контакты"));
-                $(".Footer__contact").$(".Footer__contact-address").shouldBe(visible).shouldHave(text("Адреса магазинов"));
-                $(".Footer__contact").$(".Footer__contact-button").shouldBe(visible).shouldHave(text("Задать вопрос"));
+                mainPage.checkFooterContactHeading("Контакты");
+                mainPage.checkFooterContactAddress("Адреса магазинов");
+                mainPage.checkFooterContactButton("Задать вопрос");
             });
             step("Меню нижнего колонтитула", () -> {
-                $(".FooterMenu__menu").shouldBe(visible).shouldBe(text("Журнал"), text("Акции"), text("Сервисные центры"),
-                        text("Услуги"), text("Корпоративным клиентам"), text("Обзоры"), text("Барахолка"), text("Форум"),
-                        text("Конфигуратор"), text("Подбор расходных материалов"), text("Ситилинк"), text("Новости"),
-                        text("Клуб Ситилинк"), text("Вакансии"));
+                mainPage.checkFooterMenu("Журнал");
+                mainPage.checkFooterMenu("Акции");
+                mainPage.checkFooterMenu("Сервисные центры");
+                mainPage.checkFooterMenu("Услуги");
+                mainPage.checkFooterMenu("Корпоративным клиентам");
+                mainPage.checkFooterMenu("Обзоры");
+                mainPage.checkFooterMenu("Барахолка");
+                mainPage.checkFooterMenu("Форум");
+                mainPage.checkFooterMenu("Конфигуратор");
+                mainPage.checkFooterMenu("Подбор расходных материало");
+                mainPage.checkFooterMenu("Ситилинк");
+                mainPage.checkFooterMenu("Новости");
+                mainPage.checkFooterMenu("Клуб Ситилинк");
+                mainPage.checkFooterMenu("Вакансии");
             });
             step("Копирайт", () ->
-                $(".Footer__citilink").shouldBe(visible).shouldBe(text("© Ситилинк, 2008–2022")));
+                mainPage.checkFooter("© Ситилинк, 2008–2022"));
             step("Платёжные системы и партнёры", () -> {
-                $(".PaymentIcons__payment-icon_world-pay").shouldBe(visible);
-                $(".PaymentIcons__payment-icon_mastercard_pay").shouldBe(visible);
-                $(".PaymentIcons__payment-icon_visa_pay").shouldBe(visible);
-                $(".PaymentIcons__payment-icon_union_pay").shouldBe(visible);
-                $(".PaymentIcons__payment-icon_yandex_market").shouldBe(visible);
-                $(".PaymentIcons__payment-icon_akit").shouldBe(visible);
-                $(".PaymentIcons__payment-icon_eaist").shouldBe(visible);
-                $(".PaymentIcons__payment-icon_rtrs").shouldBe(visible);
+                mainPage.checkPaymentIconWorldPay();
+                mainPage.checkPaymentIconMastercardPay();
+                mainPage.checkPaymentIconVisaPay();
+                mainPage.checkPaymentIconUnionPay();
+                mainPage.checkPaymentIconYandex();
+                mainPage.checkPaymentIconAkit();
+                mainPage.checkPaymentIconEaist();
+                mainPage.checkPaymentIconRtrs();
             });
             step("Политика обработки персональных данных", () ->
-                $(".Footer__gdpr").shouldBe(visible));
+                mainPage.checkFooterGdpr());
         });
     }
 }

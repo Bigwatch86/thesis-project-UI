@@ -36,7 +36,21 @@ public class TESTMainPage {
             SubscribeTitlePush = $(".Subscribe__title_push"),
             SubscribePush = $(".Subscribe__push").$(".Subscribe__input-block"),
             SubscribePushButton = $(".Subscribe__push").$(".Subscribe__button-push"),
-            FooterContact = $(".Footer__contact");
+            FooterBody = $(".Footer__body"),
+    FooterContactHeading = $(".Footer__contact").$(".Heading"),
+    FooterContactAddress = $(".Footer__contact").$(".Footer__contact-address"),
+    FooterContactButton = $(".Footer__contact").$(".Footer__contact-button"),
+    FooterMenu = $(".FooterMenu__menu"),
+    Footer = $(".Footer__citilink"),
+    PaymentIconWorldPay = $(".PaymentIcons__payment-icon_world-pay"),
+    PaymentIconMastercardPay = $(".PaymentIcons__payment-icon_mastercard_pay").shouldBe(visible),
+    PaymentIconVisaPay = $(".PaymentIcons__payment-icon_visa_pay").shouldBe(visible),
+    PaymentIconUnionPay = $(".PaymentIcons__payment-icon_union_pay").shouldBe(visible),
+    PaymentIconYandex = $(".PaymentIcons__payment-icon_yandex_market").shouldBe(visible),
+    PaymentIconAkit = $(".PaymentIcons__payment-icon_akit").shouldBe(visible),
+    PaymentIconEaist = $(".PaymentIcons__payment-icon_eaist").shouldBe(visible),
+    PaymentIconRtrs = $(".PaymentIcons__payment-icon_rtrs").shouldBe(visible),
+    FooterGdpr = $(".Footer__gdpr");
 
     public void checkLogo() {
         MainHeaderLogo.shouldBe(visible);
@@ -128,8 +142,52 @@ public class TESTMainPage {
     public void checkSubscribePushButton(String value) {
         SubscribePushButton.shouldBe(visible).shouldHave(text(value));
     }
-
     public void checkPushTitle(String title) {
         SubscribeTitlePush.shouldBe(visible).shouldHave(text(title));
+    }
+    public void checkFooterBody() {
+        FooterBody.shouldBe(visible);
+    }
+    public void checkFooterContactHeading(String value) {
+        FooterContactHeading.shouldBe(visible).shouldHave(text(value));
+    }
+    public void checkFooterContactAddress(String value) {
+        FooterContactAddress.shouldBe(visible).shouldHave(text(value));
+    }
+    public void checkFooterContactButton(String value) {
+        FooterContactButton.shouldBe(visible).shouldHave(text(value));
+    }
+    public void checkFooterMenu(String value) {
+        FooterMenu.shouldBe(visible).shouldHave(text(value));
+    }
+    public void checkFooter(String value) {
+        Footer.shouldBe(visible).shouldHave(text(value));
+    }
+    public void checkPaymentIconWorldPay() {
+        PaymentIconWorldPay.shouldBe(visible);
+    }
+    public void checkPaymentIconMastercardPay() {
+        PaymentIconMastercardPay.shouldBe(visible);
+    }
+    public void checkPaymentIconVisaPay() {
+        PaymentIconVisaPay.shouldBe(visible);
+    }
+    public void checkPaymentIconUnionPay() {
+        PaymentIconUnionPay.shouldBe(visible);
+    }
+    public void checkPaymentIconYandex() {
+        PaymentIconYandex.shouldBe(visible);
+    }
+    public void checkPaymentIconAkit() {
+        PaymentIconAkit.shouldBe(visible);
+    }
+    public void checkPaymentIconEaist() {
+        PaymentIconEaist.shouldBe(visible);
+    }
+    public void checkPaymentIconRtrs() {
+        PaymentIconRtrs.shouldBe(visible);
+    }
+    public void checkFooterGdpr() {
+        FooterGdpr.shouldBe(visible);
     }
 }
