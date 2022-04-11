@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Тесты для проверки содержимого главной страницы citilink.ru")
-public class TESTMainPageTests extends TestBase{
+public class TESTMainPageTests extends TestBase {
     TESTMainPage mainPage = new TESTMainPage();
 
 
@@ -28,26 +28,26 @@ public class TESTMainPageTests extends TestBase{
         step("Проверяем загрузку верхней части заголовка и её содержимого", () -> {
             mainPage.checkTop();
             step("Лого", () ->
-                mainPage.checkLogo());
+                    mainPage.checkLogo());
             mainPage.checkInfoBlock();
             step("Город", () ->
-                mainPage.checkMainHeaderCity());
+                    mainPage.checkMainHeaderCity());
             step("Телефон", () ->
-                mainPage.checkMainHeaderPhone());
+                    mainPage.checkMainHeaderPhone());
             step("Журнал", () ->
-                mainPage.checkMainMenuMagazine("Журнал"));
+                    mainPage.checkMainMenuMagazine("Журнал"));
             step("Акции", () ->
-                mainPage.checkMainMenuSale("Акции"));
+                    mainPage.checkMainMenuSale("Акции"));
             step("Ситилинк.Бизнес", () ->
-                mainPage.checkMainMenuBusiness("Ситилинк.Бизнес"));
+                    mainPage.checkMainMenuBusiness("Ситилинк.Бизнес"));
             step("Конфигуратор", () ->
-                mainPage.checkMainMenuConfig("Конфигуратор"));
+                    mainPage.checkMainMenuConfig("Конфигуратор"));
             step("Доставка", () ->
-                mainPage.checkMainMenuDelivery("Доставка"));
+                    mainPage.checkMainMenuDelivery("Доставка"));
             step("Магазины", () ->
-                mainPage.checkMainMenuShops("Магазины"));
+                    mainPage.checkMainMenuShops("Магазины"));
             step("Обратная связь", () ->
-                mainPage.checkMainMenuFeedback("Обратная связь"));
+                    mainPage.checkMainMenuFeedback("Обратная связь"));
         });
     }
 
@@ -60,19 +60,19 @@ public class TESTMainPageTests extends TestBase{
         step("Проверяем загрузку нижней части заголовка и её содержимого", () -> {
             mainPage.checkMainHeaderInnerBottom();
             step("Каталог", () ->
-                mainPage.checkMainHeaderCatalog());
+                    mainPage.checkMainHeaderCatalog());
             mainPage.checkMainHeaderActionsBlock();
             step("Поле поиска", () ->
-                mainPage.checkMainHeaderSearch());
+                    mainPage.checkMainHeaderSearch());
             mainPage.checkHeaderMenu();
             step("Войти", () ->
-                mainPage.checkAuthPopup());
+                    mainPage.checkAuthPopup());
             step("Избранное", () ->
-               mainPage.checkWishlist());
+                    mainPage.checkWishlist());
             step("Сравнение", () ->
-                mainPage.checkCompare());
+                    mainPage.checkCompare());
             step("Корзина", () ->
-                mainPage.checkBasket());
+                    mainPage.checkBasket());
         });
     }
 
@@ -101,7 +101,7 @@ public class TESTMainPageTests extends TestBase{
     @Feature("Главная страница Citilink")
     @DisplayName("Проверка загрузки тела нижнего колонтитула")
     @Severity(SeverityLevel.BLOCKER)
-    public void footerBodyLoading(){
+    public void footerBodyLoading() {
         step("Проверяем загрузку тела нижнего колонтитула", () -> {
             mainPage.checkFooterBody();
             step("Контакты", () -> {
@@ -126,7 +126,7 @@ public class TESTMainPageTests extends TestBase{
                 mainPage.checkFooterMenu("Вакансии");
             });
             step("Копирайт", () ->
-                mainPage.checkFooter("© Ситилинк, 2008–2022"));
+                    mainPage.checkFooter("© Ситилинк, 2008–2022"));
             step("Платёжные системы и партнёры", () -> {
                 mainPage.checkPaymentIconWorldPay();
                 mainPage.checkPaymentIconMastercardPay();
@@ -138,7 +138,7 @@ public class TESTMainPageTests extends TestBase{
                 mainPage.checkPaymentIconRtrs();
             });
             step("Политика обработки персональных данных", () ->
-                mainPage.checkFooterGdpr());
+                    mainPage.checkFooterGdpr());
         });
     }
 }
