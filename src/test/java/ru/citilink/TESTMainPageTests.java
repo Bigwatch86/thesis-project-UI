@@ -58,21 +58,21 @@ public class TESTMainPageTests extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     public void headerBottomLoading() {
         step("Проверяем загрузку нижней части заголовка и её содержимого", () -> {
-            $(".MainHeader__inner_bottom").shouldBe(visible);
+            mainPage.checkMainHeaderInnerBottom();
             step("Каталог", () ->
-                $(".MainHeader__catalog").shouldBe(visible));
-            $(".MainHeader__actions-block").shouldBe(visible);
+                mainPage.checkMainHeaderCatalog());
+            mainPage.checkMainHeaderActionsBlock();
             step("Поле поиска", () ->
-                $(".MainHeader__search").shouldBe(visible));
-            $(".HeaderMenu").shouldBe(visible);
+                mainPage.checkMainHeaderSearch());
+            mainPage.checkHeaderMenu();
             step("Войти", () ->
-                $(".AuthPopup ").shouldBe(visible));
+                mainPage.checkAuthPopup());
             step("Избранное", () ->
-                $("[data-name=\"wishlist\"]").shouldBe(visible));
+               mainPage.checkWishlist());
             step("Сравнение", () ->
-                $("[data-name=\"compare\"]").shouldBe(visible));
+                mainPage.checkCompare());
             step("Корзина", () ->
-                $("[data-name=\"basket\"]").shouldBe(visible));
+                mainPage.checkBasket());
         });
     }
     @Disabled
