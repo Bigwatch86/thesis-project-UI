@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Тесты для проверки содержимого главной страницы citilink.ru")
-public class MainPageTests extends TestBase{
+public class MainPageTests extends TestBase {
 
     @Test
     @Owner("igor.glazov")
@@ -99,7 +99,7 @@ public class MainPageTests extends TestBase{
     @Feature("Главная страница Citilink")
     @DisplayName("Проверка загрузки тела нижнего колонтитула")
     @Severity(SeverityLevel.BLOCKER)
-    public void footerBodyLoading(){
+    public void footerBodyLoading() {
         step("Проверяем загрузку тела нижнего колонтитула", () -> {
             $(".Footer__body").shouldBe(visible);
             step("Контакты", () -> {
