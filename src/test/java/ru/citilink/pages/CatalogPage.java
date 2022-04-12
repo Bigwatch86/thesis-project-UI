@@ -28,7 +28,7 @@ public class CatalogPage {
     }
 
     public void OpenCatalog() {
-        catalogButton.shouldBe(visible).click();
+        catalogButton.click();
     }
 
     public void typeSearchInput(String subject) {
