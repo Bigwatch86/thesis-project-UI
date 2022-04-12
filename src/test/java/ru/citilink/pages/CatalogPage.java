@@ -15,27 +15,39 @@ public class CatalogPage {
             searchInput = $(".CatalogMenu__search input"),
             subcategoryHeader = $(".Subcategory__header h1");
 
-    public void checkCatalogIsAvailable() {
+    public CatalogPage checkCatalogIsAvailable() {
         catalogIsAvailable.shouldBe(visible);
+
+        return this;
     }
 
-    public void checkCatalogLogo() {
+    public CatalogPage checkCatalogLogo() {
         catalogMenuLogo.shouldBe(visible);
+
+        return this;
     }
 
-    public void checkCategories(String value) {
+    public CatalogPage checkCategories(String value) {
         catalogMenuCategory.shouldBe(visible).shouldHave(text(value));
+
+        return this;
     }
 
-    public void OpenCatalog() {
-        catalogButton.shouldBe(visible).click();
+    public CatalogPage OpenCatalog() {
+        catalogButton.click();
+
+        return this;
     }
 
-    public void typeSearchInput(String subject) {
+    public CatalogPage typeSearchInput(String subject) {
         searchInput.setValue(subject).pressEnter();
+
+        return this;
     }
 
-    public void checkResultSearch(String value) {
+    public CatalogPage checkResultSearch(String value) {
         subcategoryHeader.shouldBe(visible).shouldHave(text(value));
+
+        return this;
     }
 }

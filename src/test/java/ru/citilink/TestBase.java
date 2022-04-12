@@ -33,6 +33,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
     }
+
     @BeforeEach
     void baseURL(){
         open("https://www.citilink.ru/");
