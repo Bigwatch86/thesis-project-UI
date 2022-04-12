@@ -36,19 +36,20 @@ public class CatalogTests extends TestBase {
             step("Лого каталога", () ->
                     catalogPage.checkCatalogLogo());
             step("Меню каталога", () -> {
-                catalogPage.checkCategories("Смартфоны и гаджеты");
-                catalogPage.checkCategories("Ноутбуки и компьютеры");
-                catalogPage.checkCategories("Телевизоры, аудио-видео, фото");
-                catalogPage.checkCategories("Бытовая техника для дома и кухни");
-                catalogPage.checkCategories("Строительство и ремонт");
-                catalogPage.checkCategories("Дом и дача");
-                catalogPage.checkCategories("Умный дом и системы безопасности");
-                catalogPage.checkCategories("Автотовары");
-                catalogPage.checkCategories("Канцтовары, Мебель и Офисная техника");
-                catalogPage.checkCategories("Красота и здоровье");
-                catalogPage.checkCategories("Детские товары");
-                catalogPage.checkCategories("Спорт и отдых");
-                catalogPage.checkCategories("Товары для геймеров");
+                catalogPage
+                        .checkCategories("Смартфоны и гаджеты")
+                        .checkCategories("Ноутбуки и компьютеры")
+                        .checkCategories("Телевизоры, аудио-видео, фото")
+                        .checkCategories("Бытовая техника для дома и кухни")
+                        .checkCategories("Строительство и ремонт")
+                        .checkCategories("Дом и дача")
+                        .checkCategories("Умный дом и системы безопасности")
+                        .checkCategories("Автотовары")
+                        .checkCategories("Канцтовары, Мебель и Офисная техника")
+                        .checkCategories("Красота и здоровье")
+                        .checkCategories("Детские товары")
+                        .checkCategories("Спорт и отдых")
+                        .checkCategories("Товары для геймеров");
             });
         });
     }
@@ -62,8 +63,9 @@ public class CatalogTests extends TestBase {
         step("Загружаем каталог товаров", () ->
                 catalogPage.OpenCatalog());
         step("Осуществляем поиск", () -> {
-            catalogPage.typeSearchInput("Ноутбук HP");
-            catalogPage.checkResultSearch("Ноутбуки HP");
+            catalogPage
+                    .typeSearchInput("Ноутбук HP")
+                    .checkResultSearch("Ноутбуки HP");
         });
     }
 }
